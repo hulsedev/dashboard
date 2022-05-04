@@ -30,7 +30,7 @@ const Submenu: React.FC = () => {
                     Docs <ArrowUpRight />
                   </>
                 }
-                value="http://localhost:8000"
+                value={process.env.NEXT_PUBLIC_HULSE_DOCS_URL}
               />
             </Tabs>
           </div>

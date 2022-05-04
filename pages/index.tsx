@@ -113,7 +113,7 @@ const Page = () => {
               />
             </div>
 
-            <NextLink href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'docs/'} passHref>
+            <NextLink href={process.env.NEXT_PUBLIC_HULSE_DOCS_URL} passHref>
               <Link className="view-all" color underline>
                 Learn more
               </Link>
