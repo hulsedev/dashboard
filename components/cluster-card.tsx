@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ cluster }) => {
 
   const setDeleteChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/delete/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/delete/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ cluster }) => {
 
   const setEditChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/edit/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/edit/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -81,7 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ cluster }) => {
   };
 
   const setLeaveChange = () => {
-    fetch('http://localhost:8000/cluster/leave/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/leave/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),

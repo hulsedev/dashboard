@@ -35,7 +35,7 @@ const Heading: React.FC<HeadingProps> = () => {
 
   const setAddChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/create/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/create/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -47,7 +47,7 @@ const Heading: React.FC<HeadingProps> = () => {
 
   const setJoinChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/join/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/join/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),

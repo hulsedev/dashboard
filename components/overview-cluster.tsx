@@ -51,7 +51,7 @@ const OverviewProject: React.FC<OverviewProjectProps> = ({ cluster }) => {
   const nameRef = React.useRef(null);
 
   const setDeleteChange = () => {
-    fetch('http://localhost:8000/cluster/delete/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/delete/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -62,7 +62,7 @@ const OverviewProject: React.FC<OverviewProjectProps> = ({ cluster }) => {
   };
 
   const setEditChange = () => {
-    fetch('http://localhost:8000/cluster/edit/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/edit/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -77,7 +77,7 @@ const OverviewProject: React.FC<OverviewProjectProps> = ({ cluster }) => {
   };
 
   const setLeaveChange = () => {
-    fetch('http://localhost:8000/cluster/leave/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/leave/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),

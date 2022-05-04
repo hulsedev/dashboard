@@ -18,8 +18,12 @@ function fetcher(url, authToken) {
 
 /*Fetch cluster information for user*/
 function useClusters() {
+  console.log(process.env.NEXT_PUBLIC_HULSE_API_URL + 'clusters/');
   const { data, error } = useSWR(
-    ['http://localhost:8000/clusters/', typeof window !== 'undefined' && window.localStorage.getItem('authToken')],
+    [
+      process.env.NEXT_PUBLIC_HULSE_API_URL + 'clusters/',
+      typeof window !== 'undefined' && window.localStorage.getItem('authToken')
+    ],
     fetcher
   );
   return {
@@ -66,7 +70,7 @@ const Page = () => {
             </Text>
             <div className="activity-event">
               <Avatar className="activity-event__avatar" text="1" />
-              <Link href="http://localhost:8000" color block>
+              <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'download/'} color block>
                 <Text className="activity-event__message">Download the Hulse MacOS app</Text>
               </Link>
 
@@ -109,7 +113,7 @@ const Page = () => {
               />
             </div>
 
-            <NextLink href="http://localhost:8000" passHref>
+            <NextLink href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'docs/'} passHref>
               <Link className="view-all" color underline>
                 Learn more
               </Link>

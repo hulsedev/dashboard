@@ -19,7 +19,10 @@ function fetcher(url, authToken) {
 /*Fetch cluster information for user*/
 function useClusters() {
   const { data, error } = useSWR(
-    ['http://localhost:8000/clusters/', typeof window !== 'undefined' && window.localStorage.getItem('authToken')],
+    [
+      process.env.NEXT_PUBLIC_HULSE_API_URL + 'clusters/',
+      typeof window !== 'undefined' && window.localStorage.getItem('authToken')
+    ],
     fetcher
   );
   return {
@@ -58,7 +61,7 @@ const Page = () => {
 
   const setChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/create/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/create/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
@@ -70,7 +73,7 @@ const Page = () => {
 
   const setJoinChange = () => {
     console.log(window.localStorage.getItem('authToken'));
-    fetch('http://localhost:8000/cluster/join/', {
+    fetch(process.env.NEXT_PUBLIC_HULSE_API_URL + 'cluster/join/', {
       method: 'POST',
       headers: {
         Authorization: 'Token ' + window.localStorage.getItem('authToken'),
