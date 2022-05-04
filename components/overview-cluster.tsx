@@ -17,9 +17,7 @@ import {
 import * as Icons from 'react-feather';
 import Users from '@geist-ui/icons/users';
 interface Props {
-  projectId: string;
-  createdAt: string;
-  repo: string;
+  cluster;
 }
 
 export type OverviewProjectProps = Props;
@@ -32,21 +30,12 @@ const OverviewProject: React.FC<OverviewProjectProps> = ({ cluster }) => {
   const editHandler = () => setEdit(true);
   const deleteHandler = () => setRemove(true);
 
-  const closeEditHandler = (event) => {
-    setEdit(false);
-    console.log('closed');
-  };
+  const closeEditHandler = () => setEdit(false);
   const [leave, setLeave] = useState(false);
   const leaveHandler = () => setLeave(true);
 
-  const closeLeaveHandler = (event) => {
-    setLeave(false);
-    console.log('closed');
-  };
-  const closeDeleteHandler = (event) => {
-    setRemove(false);
-    console.log('closed');
-  };
+  const closeLeaveHandler = () => setLeave(false);
+  const closeDeleteHandler = () => setRemove(false);
   const descriptionRef = React.useRef(null);
   const nameRef = React.useRef(null);
 

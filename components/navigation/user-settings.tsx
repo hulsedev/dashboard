@@ -10,11 +10,11 @@ const UserSettings: React.FC = () => (
       <Link href="/clusters">Clusters</Link>
     </Popover.Item>
     <Popover.Item>
-      <Link href="http://localhost:8000">Docs</Link>
+      <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'docs'}>Docs</Link>
     </Popover.Item>
     <Popover.Item line />
     <Popover.Item>
-      <Link href="http://localhost:8000/logout">Logout</Link>
+      <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'logout'}>Logout</Link>
     </Popover.Item>
   </>
 );

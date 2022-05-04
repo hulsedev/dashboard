@@ -39,10 +39,7 @@ const Page = () => {
 
   const [state, setState] = useState(false);
   const handler = () => setState(true);
-  const closeHandler = (event) => {
-    setState(false);
-    console.log('closed');
-  };
+  const closeHandler = () => setState(false);
   const descriptionRef = React.useRef(null);
   const nameRef = React.useRef(null);
   const clusterIdRef = React.useRef(null);

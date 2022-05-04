@@ -24,10 +24,7 @@ const Heading: React.FC<HeadingProps> = () => {
   const theme = useTheme();
   const [add, setAdd] = useState(false);
   const addHandler = () => setAdd(true);
-  const closeAddHandler = (event) => {
-    setAdd(false);
-    console.log('closed');
-  };
+  const closeAddHandler = () => setAdd(false);
 
   const descriptionRef = React.useRef(null);
   const nameRef = React.useRef(null);

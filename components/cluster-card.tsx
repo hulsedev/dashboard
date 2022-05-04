@@ -33,24 +33,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ cluster }) => {
   const editHandler = () => setEdit(true);
   const deleteHandler = () => setRemove(true);
 
-  const closeEditHandler = (event) => {
-    setEdit(false);
-    console.log('closed');
-  };
-  const closeDeleteHandler = (event) => {
-    setRemove(false);
-    console.log('closed');
-  };
+  const closeEditHandler = () => setEdit(false);
+  const closeDeleteHandler = () => setRemove(false);
   const descriptionRef = React.useRef(null);
   const nameRef = React.useRef(null);
 
   const [leave, setLeave] = useState(false);
   const leaveHandler = () => setLeave(true);
 
-  const closeLeaveHandler = (event) => {
-    setLeave(false);
-    console.log('closed');
-  };
+  const closeLeaveHandler = () => setLeave(false);
 
   const setDeleteChange = () => {
     console.log(window.localStorage.getItem('authToken'));
