@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
           </Button>
           <Popover content={<UserSettings />} placement="bottomEnd" portalClassName="user-settings__popover">
             <button className="user-settings__button">
-              <Avatar text="OA" src={typeof window !== 'undefined' && window.localStorage.getItem('picture')} />
+              <Avatar src={typeof window !== 'undefined' && window.localStorage.getItem('picture')} />
             </button>
           </Popover>
         </div>

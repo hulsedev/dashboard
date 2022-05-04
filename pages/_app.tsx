@@ -9,27 +9,41 @@ import { useRouter } from 'next/router';
 
 const DashboardApp = ({ Component, pageProps }: AppProps) => {
   const [themeType, setThemeType] = useState<ThemeType>('dark');
-  const { query } = useRouter();
+  const router = useRouter();
 
   // setup parameters in window storage
   if (typeof window !== 'undefined' && window.localStorage) {
-    if (query.authToken && query.authToken !== 'undefined' && typeof query.authToken === 'string') {
-      window.localStorage.setItem('authToken', query.authToken);
+    if (
+      router.query.authToken &&
+      router.query.authToken !== 'undefined' &&
+      typeof router.query.authToken === 'string'
+    ) {
+      window.localStorage.setItem('authToken', router.query.authToken);
+    } else {
+      window.location.href = process.env.NEXT_PUBLIC_HULSE_API_URL + 'login/';
     }
-    if (query.username && query.username !== 'undefined' && typeof query.username === 'string') {
-      window.localStorage.setItem('username', query.username);
+    if (router.query.username && router.query.username !== 'undefined' && typeof router.query.username === 'string') {
+      window.localStorage.setItem('username', router.query.username);
     }
-    if (query.first_name && query.first_name !== 'undefined' && typeof query.first_name === 'string') {
-      window.localStorage.setItem('first_name', query.first_name);
+    if (
+      router.query.first_name &&
+      router.query.first_name !== 'undefined' &&
+      typeof router.query.first_name === 'string'
+    ) {
+      window.localStorage.setItem('first_name', router.query.first_name);
     }
-    if (query.last_name && query.last_name !== 'undefined' && typeof query.last_name === 'string') {
-      window.localStorage.setItem('last_name', query.last_name);
+    if (
+      router.query.last_name &&
+      router.query.last_name !== 'undefined' &&
+      typeof router.query.last_name === 'string'
+    ) {
+      window.localStorage.setItem('last_name', router.query.last_name);
     }
-    if (query.email && query.email !== 'undefined' && typeof query.email === 'string') {
-      window.localStorage.setItem('email', query.email);
+    if (router.query.email && router.query.email !== 'undefined' && typeof router.query.email === 'string') {
+      window.localStorage.setItem('email', router.query.email);
     }
-    if (query.picture && query.picture !== 'undefined' && typeof query.picture === 'string') {
-      window.localStorage.setItem('picture', query.picture);
+    if (router.query.picture && router.query.picture !== 'undefined' && typeof router.query.picture === 'string') {
+      window.localStorage.setItem('picture', router.query.picture);
     }
   }
 
