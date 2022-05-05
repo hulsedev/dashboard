@@ -70,7 +70,7 @@ const Page = () => {
             </Text>
             <div className="activity-event">
               <Avatar className="activity-event__avatar" text="1" />
-              <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'download/'} color block>
+              <Link href="https://hulse-desktop.s3.amazonaws.com/Hulse.dmg" color block>
                 <Text className="activity-event__message">Download the Hulse MacOS app</Text>
               </Link>
 
