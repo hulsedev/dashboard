@@ -13,9 +13,16 @@ const UserSettings: React.FC = () => (
       <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'docs'}>Docs</Link>
     </Popover.Item>
     <Popover.Item line />
-    <Popover.Item>
-      <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'logout'}>Logout</Link>
-    </Popover.Item>
+    {window.localStorage.getItem('authToken') && (
+      <Popover.Item>
+        <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'logout'}>Logout</Link>
+      </Popover.Item>
+    )}
+    {!window.localStorage.getItem('authToken') && (
+      <Popover.Item>
+        <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'login'}>Login</Link>
+      </Popover.Item>
+    )}
   </>
 );
 

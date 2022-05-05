@@ -8,7 +8,7 @@ import Footer from '@/components/footer';
 import { useRouter } from 'next/router';
 
 const DashboardApp = ({ Component, pageProps }: AppProps) => {
-  const [themeType, setThemeType] = useState<ThemeType>('dark');
+  const [themeType, setThemeType] = useState<ThemeType>('light');
   const router = useRouter();
 
   // setup parameters in window storage
@@ -19,8 +19,6 @@ const DashboardApp = ({ Component, pageProps }: AppProps) => {
       typeof router.query.authToken === 'string'
     ) {
       window.localStorage.setItem('authToken', router.query.authToken);
-    } else {
-      window.location.href = process.env.NEXT_PUBLIC_HULSE_API_URL + 'login/';
     }
     if (router.query.username && router.query.username !== 'undefined' && typeof router.query.username === 'string') {
       window.localStorage.setItem('username', router.query.username);
