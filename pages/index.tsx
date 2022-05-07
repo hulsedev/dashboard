@@ -139,13 +139,16 @@ const Page = () => {
         }
         .projects {
           max-width: 100%;
-          margin-right: calc(4 * ${theme.layout.gap});
+          margin-left: calc(${theme.layout.gap});
+          margin-right: calc(${theme.layout.gap});
         }
         .projects :global(.project__wrapper):not(:last-of-type) {
           margin-bottom: calc(1.5 * ${theme.layout.gap});
         }
         .recent-activity {
           max-width: 100%;
+          margin-left: calc(${theme.layout.gap});
+          margin-right: calc(${theme.layout.gap});
         }
         .activity-event__message {
           white-space: nowrap;
