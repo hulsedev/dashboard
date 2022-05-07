@@ -10,7 +10,7 @@ const UserSettings: React.FC = () => (
       <Link href="/clusters">Clusters</Link>
     </Popover.Item>
     <Popover.Item>
-      <Link href={process.env.NEXT_PUBLIC_HULSE_API_URL + 'docs'}>Docs</Link>
+      <Link href={process.env.NEXT_PUBLIC_HULSE_DOCS_URL}>Docs</Link>
     </Popover.Item>
     <Popover.Item line />
     {window.localStorage.getItem('authToken') && (

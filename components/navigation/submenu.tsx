@@ -23,7 +23,7 @@ const Submenu: React.FC = () => {
               <Tabs.Item label="Overview" value="/" />
               <Tabs.Item label="Clusters" value="/clusters" />
               <Tabs.Item label="FAQ" value="/faq" />
-              <Tabs.Item label="Settings" value="/settings" />
+              {/*<Tabs.Item label="Settings" value="/settings" />*/}
               <Tabs.Item
                 label={
                   <>
