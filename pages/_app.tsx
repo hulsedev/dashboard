@@ -69,7 +69,8 @@ const DashboardApp = ({ Component, pageProps }: AppProps) => {
         <meta name="og:title" content="Hulse Beta Dashboard" />
         <meta name="og:description" content="Manage your Hulse clusters." />
         <meta name="description" content="Manage your Hulse clusters." />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;800&display=swap" rel="stylesheet" />
       </Head>
       <GeistProvider themeType={themeType}>
         <CssBaseline />

@@ -140,7 +140,6 @@ const Heading: React.FC<HeadingProps> = () => {
         </div>
       </div>
       <style jsx>{`
-        font-family: 'Nunito', sans-serif;
         .heading__wrapper {
           border-bottom: 1px solid ${theme.palette.border};
         }

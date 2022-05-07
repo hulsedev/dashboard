@@ -49,8 +49,7 @@ const Menu: React.FC = () => {
 
         .menu-nav__title {
           font-size: 1.5rem;
-          font-family: 'Nunito', sans-serif;
-          font-weight: 700;
+          font-weight: 800;
           letter-spacing: 0;
         }
         .menu-nav > div {
