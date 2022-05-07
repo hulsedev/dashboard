@@ -147,8 +147,6 @@ const Page = () => {
         }
         .recent-activity {
           max-width: 100%;
-          margin-left: calc(${theme.layout.gap});
-          margin-right: calc(${theme.layout.gap});
         }
         .activity-event__message {
           white-space: nowrap;
