@@ -55,15 +55,6 @@ const Page = () => {
       <Heading />
       <div className="page__wrapper">
         <div className="page__content">
-          <div className="projects">
-            {clusterOverviews}
-            <NextLink href="/clusters" passHref>
-              <Link className="view-all" color underline>
-                View All Clusters
-              </Link>
-            </NextLink>
-          </div>
-
           <div className="recent-activity">
             <Text h2 className="recent-activity__title">
               Getting Started
@@ -119,6 +110,14 @@ const Page = () => {
               </Link>
             </NextLink>
           </div>
+          <div className="projects">
+            {clusterOverviews}
+            <NextLink href="/clusters" passHref>
+              <Link className="view-all" color underline>
+                View All Clusters
+              </Link>
+            </NextLink>
+          </div>
         </div>
       </div>
 
@@ -139,7 +138,6 @@ const Page = () => {
           box-sizing: border-box;
         }
         .projects {
-          width: 50%;
           max-width: 100%;
           margin-right: calc(4 * ${theme.layout.gap});
         }
@@ -148,7 +146,6 @@ const Page = () => {
         }
         .recent-activity {
           max-width: 100%;
-          width: 40%;
         }
         .activity-event__message {
           white-space: nowrap;
@@ -156,7 +153,7 @@ const Page = () => {
           text-overflow: ellipsis;
         }
         .recent-activity :global(.recent-activity__title) {
-          font-size: 0.875rem;
+          font-size: 1rem;
           font-weight: 700;
           margin: 0 0 calc(3 * ${theme.layout.gapHalf});
         }
