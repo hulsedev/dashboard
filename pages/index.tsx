@@ -70,8 +70,8 @@ const Page = () => {
             </Text>
             <div className="activity-event">
               <Avatar className="activity-event__avatar" text="1" />
-              <Link href="https://hulse-desktop.s3.amazonaws.com/Hulse.dmg" color block>
-                <Text className="activity-event__message">Download the Hulse MacOS app</Text>
+              <Link href="https://hulse-desktop.s3.amazonaws.com/universal2/Hulse.dmg" color block>
+                <Text className="activity-event__message">Download Hulse macOS app</Text>
               </Link>
 
               <Text className="activity-event__created-at">
