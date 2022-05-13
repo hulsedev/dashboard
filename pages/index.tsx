@@ -71,7 +71,7 @@ const Page = () => {
             <div className="activity-event">
               <Avatar className="activity-event__avatar" text="1" />
               <Link href="https://hulse-desktop.s3.amazonaws.com/universal2/Hulse.dmg" color block>
-                <Text className="activity-event__message">Download Hulse macOS app</Text>
+                <Text className="activity-event__message">Download Hulse macOS app (Intel)</Text>
               </Link>
 
               <Text className="activity-event__created-at">
